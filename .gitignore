@@ -1,0 +1,27 @@
+# Environment variables (API keys, secrets)
+.env
+.env.*
+!.env.example
+
+# Key files
+key.txt
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.sw?

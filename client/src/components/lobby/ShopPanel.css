@@ -1,0 +1,170 @@
+.shop-panel {
+  max-width: 560px;
+}
+
+.shop-panel-balance {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.shop-panel-balance strong {
+  color: var(--gold-accent);
+}
+
+/* Tabs */
+.shop-tabs {
+  display: flex;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.shop-tab {
+  flex: 1;
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast), background var(--transition-fast);
+}
+
+.shop-tab:hover {
+  color: var(--text-primary);
+}
+
+.shop-tab--active {
+  background: rgba(201, 168, 76, 0.15);
+  color: var(--gold-accent);
+}
+
+.shop-message {
+  font-size: 13px;
+  color: var(--gold-accent);
+  text-align: center;
+  margin-bottom: var(--space-3);
+  animation: fadeIn 0.2s ease;
+}
+
+/* Item Grid */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+}
+
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-3);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.shop-item:hover {
+  transform: translateY(-1px);
+}
+
+.shop-item.rarity-legendary {
+  border-color: rgba(201, 168, 76, 0.2);
+}
+
+.shop-item.rarity-rare {
+  border-color: rgba(43, 95, 158, 0.2);
+}
+
+.shop-item--owned {
+  opacity: 0.7;
+}
+
+.shop-item-emoji {
+  font-size: 32px;
+  margin-bottom: var(--space-1);
+}
+
+.shop-item-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.shop-item-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  text-align: center;
+  min-height: 30px;
+}
+
+.shop-item-rarity {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1px 6px;
+  border-radius: var(--radius-round);
+}
+
+.rarity-label-common {
+  background: var(--bg-surface);
+  color: var(--text-dim);
+}
+
+.rarity-label-rare {
+  background: rgba(43, 95, 158, 0.2);
+  color: var(--chip-blue);
+}
+
+.rarity-label-legendary {
+  background: rgba(201, 168, 76, 0.2);
+  color: var(--gold-accent);
+}
+
+.shop-item-footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+  width: 100%;
+  justify-content: center;
+}
+
+.shop-item-price {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.btn-buy {
+  padding: var(--space-1) var(--space-3);
+  background: var(--gold-accent);
+  color: var(--bg-deep);
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.btn-buy:hover:not(:disabled) {
+  background: var(--gold-muted);
+}
+
+.btn-buy:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.shop-item-owned-badge {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--success);
+  padding: var(--space-1) var(--space-3);
+  background: rgba(39, 103, 73, 0.2);
+  border-radius: var(--radius-md);
+}

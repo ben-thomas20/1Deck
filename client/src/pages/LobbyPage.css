@@ -1,0 +1,87 @@
+.lobby-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+}
+
+.lobby-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-8);
+  border-bottom: 1px solid var(--bg-elevated);
+}
+
+.lobby-title {
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--gold-accent);
+  letter-spacing: 1px;
+}
+
+.lobby-user {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.lobby-user strong {
+  color: var(--text-primary);
+}
+
+/* ─── Dashboard Grid ────────────────────────────────────────── */
+
+.lobby-dashboard {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr auto;
+  gap: var(--space-5);
+  padding: var(--space-6) var(--space-8);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* ─── Shared Tile Base ──────────────────────────────────────── */
+
+.dashboard-tile {
+  background: var(--bg-surface);
+  border-radius: var(--radius-xl);
+  padding: var(--space-5);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  transition: border-color var(--transition-fast);
+}
+
+.dashboard-tile:hover {
+  border-color: rgba(201, 168, 76, 0.15);
+}
+
+.tile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.tile-title {
+  font-family: var(--font-display);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.btn-create {
+  padding: var(--space-1) var(--space-4);
+  background: var(--gold-accent);
+  color: var(--bg-deep);
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.btn-create:hover {
+  background: var(--gold-muted);
+}

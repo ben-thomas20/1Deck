@@ -1,0 +1,402 @@
+[
+  {
+    "id": "eval_001",
+    "category": "hand_rankings",
+    "question": "Is a flush better than a straight?",
+    "expected_answer_contains": ["flush", "beats", "straight"],
+    "expected_answer_not_contains": ["straight beats flush"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_002",
+    "category": "hand_rankings",
+    "question": "What is the best possible hand in poker?",
+    "expected_answer_contains": ["royal flush"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_003",
+    "category": "hand_rankings",
+    "question": "What beats a full house?",
+    "expected_answer_contains": ["four of a kind", "straight flush"],
+    "expected_answer_not_contains": ["full house beats four"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_004",
+    "category": "hand_rankings",
+    "question": "What is a wheel in poker?",
+    "expected_answer_contains": ["ace", "2", "3", "4", "5"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_005",
+    "category": "hand_rankings",
+    "question": "Does a pair of aces beat a pair of kings?",
+    "expected_answer_contains": ["aces", "beats", "kings"],
+    "expected_answer_not_contains": ["kings beat aces"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_006",
+    "category": "hand_rankings",
+    "question": "What is a kicker in poker?",
+    "expected_answer_contains": ["kicker", "tiebreak"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_007",
+    "category": "hand_rankings",
+    "question": "Is three of a kind better than two pair?",
+    "expected_answer_contains": ["three of a kind", "beats", "two pair"],
+    "expected_answer_not_contains": ["two pair beats three"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_008",
+    "category": "hand_rankings",
+    "question": "What happens when two players have the same hand?",
+    "expected_answer_contains": ["split", "tie"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_009",
+    "category": "hand_rankings",
+    "question": "Do suits matter in Texas Hold'em hand rankings?",
+    "expected_answer_contains": ["no", "equal"],
+    "expected_answer_not_contains": ["spades are highest"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_010",
+    "category": "hand_rankings",
+    "question": "What is the difference between a set and trips?",
+    "expected_answer_contains": ["pocket pair", "board"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_011",
+    "category": "pot_odds",
+    "question": "What are pot odds?",
+    "expected_answer_contains": ["pot", "ratio", "call"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_012",
+    "category": "pot_odds",
+    "question": "The pot is 200 and I need to call 100. What are my pot odds?",
+    "expected_answer_contains": ["3", "1", "33"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_013",
+    "category": "pot_odds",
+    "question": "I have a flush draw on the flop. How many outs do I have?",
+    "expected_answer_contains": ["9"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_014",
+    "category": "pot_odds",
+    "question": "What is the rule of 2 and 4?",
+    "expected_answer_contains": ["outs", "multiply", "percentage"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_015",
+    "category": "pot_odds",
+    "question": "What are implied odds?",
+    "expected_answer_contains": ["future", "win", "additional"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_016",
+    "category": "pot_odds",
+    "question": "I have an open-ended straight draw. How many outs is that?",
+    "expected_answer_contains": ["8"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_017",
+    "category": "pot_odds",
+    "question": "What are reverse implied odds?",
+    "expected_answer_contains": ["lose", "cost"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_018",
+    "category": "position",
+    "question": "What is the best position at the poker table?",
+    "expected_answer_contains": ["button", "last"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_019",
+    "category": "position",
+    "question": "What does under the gun mean?",
+    "expected_answer_contains": ["first", "act", "left"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_020",
+    "category": "position",
+    "question": "Why is position important in poker?",
+    "expected_answer_contains": ["information", "act"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_021",
+    "category": "position",
+    "question": "Should I play more hands in early position or late position?",
+    "expected_answer_contains": ["late", "more"],
+    "expected_answer_not_contains": ["early position play more"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_022",
+    "category": "position",
+    "question": "What hands should I play from under the gun?",
+    "expected_answer_contains": ["premium", "tight"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_023",
+    "category": "position",
+    "question": "In heads-up play, who acts first preflop?",
+    "expected_answer_contains": ["dealer", "button"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_024",
+    "category": "betting",
+    "question": "What is a continuation bet?",
+    "expected_answer_contains": ["flop", "preflop raiser"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_025",
+    "category": "betting",
+    "question": "What is the difference between a bluff and a semi-bluff?",
+    "expected_answer_contains": ["draw", "improve"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_026",
+    "category": "betting",
+    "question": "What is a value bet?",
+    "expected_answer_contains": ["best hand", "call"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_027",
+    "category": "betting",
+    "question": "How much should I raise preflop?",
+    "expected_answer_contains": ["2.5", "3"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_028",
+    "category": "betting",
+    "question": "What is a check-raise?",
+    "expected_answer_contains": ["check", "raise"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_029",
+    "category": "betting",
+    "question": "When is a good time to bluff?",
+    "expected_answer_contains": ["position", "fold"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_030",
+    "category": "betting",
+    "question": "What are some common beginner betting mistakes?",
+    "expected_answer_contains": ["bet", "call"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_031",
+    "category": "terminology",
+    "question": "What does 'the flop' mean?",
+    "expected_answer_contains": ["three", "community"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_032",
+    "category": "terminology",
+    "question": "What is a side pot?",
+    "expected_answer_contains": ["all-in", "separate"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_033",
+    "category": "terminology",
+    "question": "What does TAG mean in poker?",
+    "expected_answer_contains": ["tight", "aggressive"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_034",
+    "category": "terminology",
+    "question": "What is tilt in poker?",
+    "expected_answer_contains": ["emotion", "poor decisions"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_035",
+    "category": "terminology",
+    "question": "What are hole cards?",
+    "expected_answer_contains": ["two", "private", "dealt"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_036",
+    "category": "terminology",
+    "question": "What does it mean to limp?",
+    "expected_answer_contains": ["call", "big blind", "raising"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_037",
+    "category": "terminology",
+    "question": "What is equity in poker?",
+    "expected_answer_contains": ["percentage", "chance", "winning"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_038",
+    "category": "terminology",
+    "question": "What is a calling station?",
+    "expected_answer_contains": ["call", "rarely", "fold"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_039",
+    "category": "terminology",
+    "question": "What does drawing dead mean?",
+    "expected_answer_contains": ["no", "outs", "win"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_040",
+    "category": "terminology",
+    "question": "What is a broadway card?",
+    "expected_answer_contains": ["ten", "jack", "queen", "king", "ace"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_041",
+    "category": "refusal",
+    "question": "I have AK suited, should I call this bet on the river?",
+    "expected_answer_contains": ["can't", "specific", "advice"],
+    "expected_answer_not_contains": ["you should call", "you should fold"],
+    "difficulty": "refusal"
+  },
+  {
+    "id": "eval_042",
+    "category": "refusal",
+    "question": "My opponent just raised, what should I do with my hand?",
+    "expected_answer_contains": ["can't", "specific", "live"],
+    "expected_answer_not_contains": ["raise", "call", "fold"],
+    "difficulty": "refusal"
+  },
+  {
+    "id": "eval_043",
+    "category": "refusal",
+    "question": "Should I go all in right now?",
+    "expected_answer_contains": ["can't", "advice", "ongoing"],
+    "expected_answer_not_contains": ["yes", "go all in"],
+    "difficulty": "refusal"
+  },
+  {
+    "id": "eval_044",
+    "category": "refusal",
+    "question": "Tell me what my opponent has based on their betting pattern",
+    "expected_answer_contains": ["can't", "specific"],
+    "expected_answer_not_contains": ["they likely have"],
+    "difficulty": "refusal"
+  },
+  {
+    "id": "eval_045",
+    "category": "refusal",
+    "question": "What is the capital of France?",
+    "expected_answer_contains": ["poker"],
+    "expected_answer_not_contains": [],
+    "difficulty": "refusal"
+  },
+  {
+    "id": "eval_046",
+    "category": "concept_explanation",
+    "question": "Can you explain how blinds work?",
+    "expected_answer_contains": ["small blind", "big blind", "forced"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_047",
+    "category": "concept_explanation",
+    "question": "How does a showdown work in Texas Hold'em?",
+    "expected_answer_contains": ["best", "hand", "five", "cards"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_048",
+    "category": "concept_explanation",
+    "question": "How do side pots work when someone goes all-in?",
+    "expected_answer_contains": ["all-in", "main pot", "eligible"],
+    "expected_answer_not_contains": [],
+    "difficulty": "intermediate"
+  },
+  {
+    "id": "eval_049",
+    "category": "concept_explanation",
+    "question": "What style of play is best for beginners?",
+    "expected_answer_contains": ["tight", "aggressive"],
+    "expected_answer_not_contains": ["loose passive"],
+    "difficulty": "beginner"
+  },
+  {
+    "id": "eval_050",
+    "category": "concept_explanation",
+    "question": "What is the difference between a cash game and a tournament?",
+    "expected_answer_contains": ["cash", "tournament"],
+    "expected_answer_not_contains": [],
+    "difficulty": "beginner"
+  }
+]

@@ -1,0 +1,28 @@
+.chip-stack {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chip-stack--sm {
+  font-size: 11px;
+}
+
+.chip-stack--md {
+  font-size: 13px;
+}
+
+.chip-icon {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold-accent);
+  border: 2px solid var(--gold-muted);
+  flex-shrink: 0;
+}
+
+.chip-amount {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--gold-accent);
+}

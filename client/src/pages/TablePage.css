@@ -1,0 +1,102 @@
+.table-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+
+.table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-6);
+  border-bottom: 1px solid var(--bg-elevated);
+  z-index: 20;
+}
+
+.btn-back {
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 13px;
+  border-radius: var(--radius-md);
+  transition: color var(--transition-fast);
+}
+
+.btn-back:hover {
+  color: var(--text-primary);
+}
+
+.table-info-bar {
+  display: flex;
+  gap: var(--space-6);
+}
+
+.info-item {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.info-street {
+  color: var(--gold-accent);
+  font-weight: 600;
+}
+
+.table-username {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ─── Winner Overlay ──────────────────────────────────────── */
+
+.winner-overlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  animation: winnerFadeIn 0.4s ease;
+}
+
+.winner-banner {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.95), rgba(180, 145, 55, 0.95));
+  color: var(--bg-deep);
+  padding: var(--space-4) var(--space-8);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-xl), 0 0 40px rgba(201, 168, 76, 0.3);
+  min-width: 280px;
+}
+
+.winner-name {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.winner-details {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+@keyframes winnerFadeIn {
+  from { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  to   { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.my-hole-cards {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 40;
+  animation: slideUp 0.3s ease;
+}

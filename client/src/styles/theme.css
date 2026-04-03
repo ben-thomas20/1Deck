@@ -1,0 +1,189 @@
+/* ─── 1Deck Poker Design System ──────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* Background */
+  --bg-deep: #0B1117;
+  --bg-surface: #151D27;
+  --bg-elevated: #1C2733;
+
+  /* Table felt */
+  --felt-green: #1A5C3A;
+  --felt-dark: #0F3622;
+
+  /* Gold accent */
+  --gold-accent: #C9A84C;
+  --gold-muted: #8B7A3E;
+
+  /* Text */
+  --text-primary: #E8E2D6;
+  --text-secondary: #8A9AAF;
+  --text-dim: #4A5568;
+
+  /* Suits */
+  --red-suit: #C44040;
+  --white-suit: #E8E2D6;
+
+  /* Chips */
+  --chip-red: #B83030;
+  --chip-blue: #2B5F9E;
+  --chip-green: #2B7A4B;
+  --chip-black: #2D2D2D;
+  --chip-white: #D4CFC4;
+
+  /* Semantic */
+  --danger: #9B2C2C;
+  --success: #276749;
+
+  /* Typography */
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Spacing */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+
+  /* Borders */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-round: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 0, 0, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 250ms ease;
+  --transition-slow: 400ms ease;
+}
+
+/* ─── Global Styles ──────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--text-primary);
+  background-color: var(--bg-deep);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input {
+  font-family: var(--font-body);
+  outline: none;
+  border: none;
+}
+
+/* ─── Utility Classes ────────────────────────────────────────── */
+
+.text-gold { color: var(--gold-accent); }
+.text-muted { color: var(--text-secondary); }
+.text-dim { color: var(--text-dim); }
+
+/* ─── Animations ─────────────────────────────────────────────── */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
+  50% { box-shadow: 0 0 0 8px rgba(201, 168, 76, 0); }
+}
+
+@keyframes timer-arc {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: 283; }
+}
+
+@keyframes chip-slide {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes deal-card {
+  from {
+    transform: translate(-50%, -50%) rotate(5deg) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes card-flip {
+  0% { transform: rotateY(180deg); }
+  100% { transform: rotateY(0deg); }
+}
+
+/* ─── Desktop Only Message ───────────────────────────────────── */
+
+@media (max-width: 1023px) {
+  body::after {
+    content: 'This site is designed for desktop. Please use a viewport wider than 1024px.';
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-deep);
+    color: var(--text-secondary);
+    font-size: 16px;
+    text-align: center;
+    padding: var(--space-8);
+    z-index: 99999;
+  }
+}

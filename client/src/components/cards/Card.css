@@ -1,0 +1,78 @@
+.card {
+  position: relative;
+  background: #F5F1EB;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.card--sm {
+  width: 40px;
+  height: 56px;
+  font-size: 10px;
+}
+
+.card--md {
+  width: 56px;
+  height: 80px;
+  font-size: 13px;
+}
+
+.card--lg {
+  width: 72px;
+  height: 104px;
+  font-size: 16px;
+}
+
+.card--red {
+  color: var(--red-suit);
+}
+
+.card--black {
+  color: var(--bg-elevated);
+}
+
+.card-corner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.card-corner--top {
+  top: 4px;
+  left: 4px;
+}
+
+.card-corner--bottom {
+  bottom: 4px;
+  right: 4px;
+  transform: rotate(180deg);
+}
+
+.card-rank {
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+
+.card-suit {
+  font-size: 0.85em;
+}
+
+.card-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-pip {
+  font-size: 2em;
+}
+
+.card--sm .card-corner { display: none; }
+.card--sm .card-pip { font-size: 1.8em; }

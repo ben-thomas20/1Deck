@@ -1,0 +1,174 @@
+.tables-tile {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tables-empty {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  padding: var(--space-8);
+}
+
+.table-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  overflow-y: auto;
+  flex: 1;
+}
+
+.table-card {
+  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: background var(--transition-fast);
+}
+
+.table-card:hover {
+  background: rgba(28, 39, 51, 0.9);
+}
+
+.table-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-2);
+}
+
+.table-card-header h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+}
+
+.table-status {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  border-radius: var(--radius-round);
+}
+
+.table-status.waiting {
+  background: rgba(28, 39, 51, 0.8);
+  color: var(--text-secondary);
+}
+
+.table-status.playing {
+  background: rgba(39, 103, 73, 0.3);
+  color: var(--success);
+}
+
+.table-card-info {
+  display: flex;
+  gap: var(--space-6);
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-3);
+}
+
+.table-card-players {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+}
+
+.player-chip {
+  font-size: 12px;
+  padding: 2px 8px;
+  background: rgba(11, 17, 23, 0.6);
+  border-radius: var(--radius-round);
+  color: var(--text-secondary);
+}
+
+.btn-join {
+  width: 100%;
+  padding: var(--space-2) var(--space-4);
+  background: var(--success);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.btn-join:hover:not(:disabled) {
+  background: var(--felt-green);
+}
+
+.btn-join:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Create Table Modal */
+.create-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.15s ease;
+}
+
+.create-modal {
+  background: var(--bg-surface);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  min-width: 320px;
+  box-shadow: var(--shadow-lg);
+  animation: slideUp 0.2s ease;
+}
+
+.create-modal h3 {
+  font-family: var(--font-display);
+  margin-bottom: var(--space-5);
+  font-size: 18px;
+}
+
+.create-modal input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-elevated);
+  border: 1px solid var(--text-dim);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 14px;
+  margin-bottom: var(--space-5);
+}
+
+.create-modal input:focus {
+  border-color: var(--gold-accent);
+}
+
+.create-modal-actions {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: flex-end;
+}
+
+.btn-cancel {
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 14px;
+  border-radius: var(--radius-md);
+}
+
+.btn-confirm {
+  padding: var(--space-2) var(--space-4);
+  background: var(--gold-accent);
+  color: var(--bg-deep);
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: var(--radius-md);
+}

@@ -1,0 +1,25 @@
+.hole-cards {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+}
+
+.hole-card {
+  transition: transform var(--transition-normal);
+}
+
+.hole-card--left {
+  transform: rotate(-3deg);
+}
+
+.hole-card--right {
+  transform: rotate(3deg);
+}
+
+.hole-cards:hover .hole-card--left {
+  transform: rotate(-6deg) translateX(-4px);
+}
+
+.hole-cards:hover .hole-card--right {
+  transform: rotate(6deg) translateX(4px);
+}

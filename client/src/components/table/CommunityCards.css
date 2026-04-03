@@ -1,0 +1,10 @@
+.community-cards {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.community-card {
+  animation: card-flip 0.4s ease;
+}

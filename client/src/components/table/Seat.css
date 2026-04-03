@@ -1,0 +1,172 @@
+.seat {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  z-index: 10;
+  transition: opacity var(--transition-normal);
+}
+
+.seat--dimmed {
+  opacity: 0.4;
+}
+
+/* ─── Seat Positions (clockwise from bottom-center) ──────── */
+
+.seat--pos-0 { bottom: -8%;  left: 30%;  transform: translateX(-50%); }
+.seat--pos-7 { bottom: -8%;  left: 70%;  transform: translateX(-50%); }
+.seat--pos-1 { top: 50%;    left: -2%;  transform: translate(-50%, -70%); }
+.seat--pos-2 { top: 8%;     left: 12%;  transform: translateX(-50%); }
+.seat--pos-3 { top: -10%;   left: 35%;  transform: translateX(-50%); }
+.seat--pos-4 { top: -10%;   left: 65%;  transform: translateX(-50%); }
+.seat--pos-5 { top: 8%;     left: 88%;  transform: translateX(-50%); }
+.seat--pos-6 { top: 50%;    left: 102%; transform: translate(-50%, -70%); }
+
+/* ─── Empty Seat ─────────────────────────────────────────── */
+
+.seat--empty {
+  cursor: pointer;
+}
+
+.seat-empty-content {
+  width: 56px;
+  height: 56px;
+  border: 2px dashed var(--text-dim);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.seat--empty:hover .seat-empty-content {
+  border-color: var(--gold-accent);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.seat-empty-label {
+  font-size: 12px;
+  color: var(--text-dim);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.seat--empty:hover .seat-empty-label {
+  color: var(--gold-accent);
+}
+
+/* ─── Avatar Wrapper ─────────────────────────────────────── */
+
+.seat-avatar-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+}
+
+.seat-avatar-wrapper .avatar {
+  position: relative;
+  z-index: 1;
+}
+
+.seat-timer-count {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* ─── Info ────────────────────────────────────────────────── */
+
+.seat-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.seat-username {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+  max-width: 80px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.seat-chips {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* ─── Badges ─────────────────────────────────────────────── */
+
+.seat-badges {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  display: flex;
+  gap: 2px;
+  z-index: 5;
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 2px 4px;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.badge--dealer {
+  background: var(--chip-white);
+  color: var(--bg-deep);
+}
+
+.badge--sb {
+  background: var(--chip-blue);
+  color: white;
+}
+
+.badge--bb {
+  background: var(--chip-red);
+  color: white;
+}
+
+.badge--allin {
+  background: var(--gold-accent);
+  color: var(--bg-deep);
+  font-size: 10px;
+  padding: 2px 6px;
+  margin-top: 2px;
+}
+
+/* ─── Seat Cards ─────────────────────────────────────────── */
+
+.seat-cards {
+  margin-top: 2px;
+}
+
+/* ─── Bet ─────────────────────────────────────────────────── */
+
+.seat-bet {
+  position: absolute;
+  animation: chip-slide 0.3s ease;
+}
+
+/* Position bets toward center */
+.seat--pos-0 .seat-bet,
+.seat--pos-7 .seat-bet { top: -28px; }
+.seat--pos-1 .seat-bet { right: -40px; top: 50%; transform: translateY(-50%); }
+.seat--pos-2 .seat-bet { bottom: -20px; }
+.seat--pos-3 .seat-bet,
+.seat--pos-4 .seat-bet { bottom: -24px; }
+.seat--pos-5 .seat-bet { bottom: -20px; }
+.seat--pos-6 .seat-bet { left: -40px; top: 50%; transform: translateY(-50%); }

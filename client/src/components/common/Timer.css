@@ -1,0 +1,22 @@
+.timer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-svg {
+  position: absolute;
+  transform: rotate(-90deg);
+}
+
+.timer-arc {
+  transition: stroke-dashoffset 1s linear, stroke var(--transition-fast);
+}
+
+.timer-text {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}

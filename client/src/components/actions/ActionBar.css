@@ -1,0 +1,105 @@
+.action-bar {
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 50;
+  animation: slideInLeft 0.2s ease;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateY(-50%) translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+.action-bar-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--bg-surface);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+  box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--bg-elevated);
+  border-left: none;
+  position: relative;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+  min-width: 80px;
+}
+
+.action-btn:hover {
+  transform: translateY(-1px);
+}
+
+.action-btn:active {
+  transform: translateY(0);
+}
+
+.action-label {
+  font-family: var(--font-body);
+}
+
+.action-shortcut {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  opacity: 0.5;
+  text-transform: uppercase;
+}
+
+/* Button variants */
+.action-btn--fold {
+  background: var(--danger);
+  color: var(--text-primary);
+}
+
+.action-btn--fold:hover {
+  background: #b33535;
+}
+
+.action-btn--check,
+.action-btn--call {
+  background: var(--success);
+  color: var(--text-primary);
+}
+
+.action-btn--check:hover,
+.action-btn--call:hover {
+  background: #2d7d55;
+}
+
+.action-btn--raise {
+  background: var(--gold-accent);
+  color: var(--bg-deep);
+}
+
+.action-btn--raise:hover,
+.action-btn--raise.active {
+  background: var(--gold-muted);
+}
+
+.action-btn--allin {
+  background: var(--bg-elevated);
+  color: var(--gold-accent);
+  border: 1px solid var(--gold-accent);
+}
+
+.action-btn--allin:hover {
+  background: rgba(201, 168, 76, 0.15);
+}
