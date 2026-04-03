@@ -4,7 +4,7 @@
   "private": true,
   "description": "Online Texas Hold'em Poker",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cd client && npm install && npm run build",
     "dev": "tsx src/server.ts",
     "start": "node dist/server.js",
     "test": "vitest run",

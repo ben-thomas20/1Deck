@@ -3,6 +3,8 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
+import { join, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { SessionManager, MemoryKVStore, type KVStore } from './server/session';
 import { LobbyManager } from './server/lobby';
 import { ChatService } from './ai/chat-service';
@@ -12,6 +14,7 @@ import { SHOP_CATALOG } from './server/shop-catalog';
 const PORT = parseInt(process.env.PORT ?? '3001', 10);
 const REDIS_URL = process.env.REDIS_URL;
 const CORS_ORIGIN = process.env.CORS_ORIGIN ?? 'http://localhost:5173';
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // ─── Express App ───────────────────────────────────────────────
 
@@ -200,6 +203,14 @@ async function main() {
       return;
     }
     res.json({ item, profile: result.profile });
+  });
+
+  // ─── Serve Client (production) ────────────────────────────────
+
+  const clientDist = join(__dirname, '..', 'client', 'dist');
+  app.use(express.static(clientDist));
+  app.get('*', (_req, res) => {
+    res.sendFile(join(clientDist, 'index.html'));
   });
 
   // ─── Start ───────────────────────────────────────────────────

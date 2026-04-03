@@ -4,7 +4,7 @@ import { PokerTable } from '../components/table/PokerTable';
 import { ActionBar } from '../components/actions/ActionBar';
 import { HoleCards } from '../components/cards/HoleCards';
 import { ChatPanel } from '../components/chat/ChatPanel';
-import { useGameState, type ValidActionsData, type ShowdownData } from '../hooks/useGameState';
+import { useGameState, type ValidActionsData } from '../hooks/useGameState';
 import './TablePage.css';
 
 interface TablePageProps {

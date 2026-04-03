@@ -1,4 +1,4 @@
-const SERVER_URL = import.meta.env.VITE_SERVER_URL ?? 'http://localhost:3001';
+const SERVER_URL = import.meta.env.VITE_SERVER_URL ?? (import.meta.env.PROD ? '' : 'http://localhost:3001');
 
 export async function apiGet<T>(path: string): Promise<T> {
   const res = await fetch(`${SERVER_URL}${path}`);

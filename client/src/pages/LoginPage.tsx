@@ -1,4 +1,4 @@
-import { useState, FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import AnimatedGradientBackground from '../components/ui/AnimatedGradientBackground';
 import './LoginPage.css';
 
@@ -6,7 +6,7 @@ interface LoginPageProps {
   onLogin: (username: string, token: string, userId: string) => void;
 }
 
-const SERVER_URL = import.meta.env.VITE_SERVER_URL ?? 'http://localhost:3001';
+const SERVER_URL = import.meta.env.VITE_SERVER_URL ?? (import.meta.env.PROD ? '' : 'http://localhost:3001');
 
 export function LoginPage({ onLogin }: LoginPageProps) {
   const [username, setUsername] = useState('');
@@ -44,7 +44,7 @@ export function LoginPage({ onLogin }: LoginPageProps) {
 
   return (
     <div className="login-page">
-      <AnimatedGradientBackground breathing={true} />
+      <AnimatedGradientBackground />
 
       <div className="login-content">
         <div className="login-card">
